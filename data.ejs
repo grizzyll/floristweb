@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="data.css">
+
+    <title>Admin Page</title>
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="header__container">
+            <!-- <img src="assets/img/perfil.jpg" alt="" class="header__img"> -->
+
+            <a href="#" class="header__logo"> WELCOME BACK ADMIN!! </a>
+
+            <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class='bx bx-search header__icon'></i>
+            </div>
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav_link nav_logo">
+                    <i class='bx bxs-disc nav__icon'></i>
+                    <span class="nav__logo-name">Admin</span>
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Profile</h3>
+
+                        <a href="#" class="nav__link active">
+                            <i class='bx bx-home nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bx-user nav__icon'></i>
+                                <span class="nav__name">Profile</span>
+                                <i class='bx bx-chevron-down nav_icon nav_dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="/gudangAdmin" class="nav__dropdown-item">Data Transaksi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/home" class="nav_link nav_logout">
+                        <i class='bx bx-log-out nav__icon'></i>
+                        <span class="nav__name">Log Out</span>
+                    </a>
+        </nav>
+    </div>
+
+    <!--========== CONTENTS ==========-->
+    <main>
+        <section>
+            <div class="p-4 p-md-5 mb-4 row " id="projectPage">
+                <h3 class="bold" id="user">Data Input From User</h3>
+                <table class="border" cellpadding="8">
+                    <ul>
+                        <tr>
+                            <th class="border"> Username </th>
+                            <th class="border"> Email </th>
+                            <th class="border"> Password </th>
+                            <th class="border"> Edit </th>
+                            <th class="border"> Delete </th>
+                        </tr>
+                        
+                        <% for (const u of apaya) { %>
+                            <tr>
+                                <td class="border">
+                                    <%= u.name %>
+                                </td>
+                                <td class="border">
+                                    <%= u.email %>
+                                </td>
+                                <td class="border   ">
+                                    <%= u.password %>
+                                </td>
+                                <td class="border"><a href="/edit/<%= u.id %>">Edit</a></td>
+                                <td class="border"><a href="/delete/<%= u.id %>">Delete</a></td>
+                            </tr>
+                            <% } %>
+                    </ul>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!--========== SCRIPT JS ==========-->
+    <script src="script.js"></script>
+</body>
+
+</html>
+        <!-- <table class="tabel">
+          <div style="color: beige;" style="text-align: left;">
+            <ul>
+             <% for ( const s of apaya) { %> 
+               <li>
+                 <%= s.name %>(<%= s.email %>) ||
+                 <a href="/delete/<%= s.id %>">Hapus</a>||
+                 <a href="/edit/<%= s.id %>">Edit></a>
+               </li>
+               <% } %>
+            </ul>
+           </div>
+      </ul>
+    </table>
+</body>
+</html>
+ -->

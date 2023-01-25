@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <h1 class="jdl">Form Edit</h1>
+            <form action="/edit/<%= apaya.id %>" method="post">
+                <label>Nama</label><br>
+                <input type="text" name="name" value="<%= apaya.name %>"><br>
+                <label>Email</label><br>
+                <input type="email" name="email" value="<%= apaya.email %>"><br>
+                <label>Pasword</label><br>
+                <input type="password" name="password" value="<%= apaya.password %>"><br>
+                <button>Edit</button>
+            </form>
+        </div>
+    
+        <style type="text/css">
+            * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f4ede5;
+    }
+    
+    p {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        padding-top: 10px;
+    }
+    
+    .login {
+        color: white;
+    }
+    
+    .jdl {
+        text-align: center;
+        padding-bottom: 20px;
+        font-family: 'candara';
+    }
+    
+    a {
+        color: rgb(11, 11, 11);
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 25px;
+        width: 300px;
+    
+        background-color: rgba(0, 0, 0, .7);
+        box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+    }
+    
+    .container h1 {
+        text-align: center;
+        color: #fafafa;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        border-bottom: 4px solid orange;
+    }
+    
+    .container label {
+        text-align: left;
+        color: #fcfcfc;
+    }
+    
+    .container form input {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        margin-bottom: 15px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid orange;
+        color: #fff;
+        font-size: 15px;
+    }
+    
+    .container form button {
+        width: 100%;
+        height: 40px;
+        padding: 5px 0;
+        border: none;
+        background-color: orange;
+        font-size: 18px;
+        color: #fafafa;
+        border-radius: 20px;
+    }
+    
+    .judul {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #000000;
+    }
+    
+    .judul2 {
+        margin: 0;
+        width: 100%;
+    
+    }
+    
+    nav {
+        width: 20%;
+        height: 400px;
+        background: rgb(250, 190, 78);
+    }
+    
+    ul.judul2 {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    ul.judul2 li {
+        float: right;
+    }
+    
+    ul.judul2 li a {
+        display: block;
+        text-decoration: none;
+        color: #0c0c0c;
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'candara';
+    }
+    
+    .menu {
+        margin: 0;
+        width: 100%;
+    
+    }
+    
+    nav {
+        width: 20%;
+        height: 400px;
+        background: #ffc9ff;
+    }
+    
+    ul.horizontal {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #f34949;
+    }
+    
+    ul.horizontal li {
+        float: right;
+    }
+    
+    ul.horizontal li a {
+        display: block;
+        text-decoration: none;
+        color: #FCF8E8;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'candara';
+    }
+    
+    ul.horizontal li a:hover {
+        background-color: #61481C;
+    }
+    
+    ul.vertical {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: #ffc9ff;
+    }
+    
+    .gambar {
+        width: 100;
+        height: 100;
+    }
+    </style>
+    </body>
+    <!-- end edit -->
+    
+    </html>
+
+    <!-- <form action="/edit/<%= apaya.id %>" method="post">
+        <div><span>Nama Siswa :</span><input type="text" name="name" value="<%= apaya.name %>"></div>
+        <div><span>Email :</span><input type="email" name="email" value="<%=apaya.email %>"></div>
+        <div><span>Password :</span><input type="password" name="password" value="<%=apaya.password %>"></div>
+        <div><button>Submit</button></div>
+    </form>
+</body>
+
+</html> -->
